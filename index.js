@@ -17,6 +17,7 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'TUIzdlslPeWi8DnGk6ZRAcVRC6WapGxoSrU0nbAD',
   masterKey: process.env.MASTER_KEY || '4h88jRWJbW7ifeWJl8Vrt4pO5Oq50S5S28TwVkLl', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://bitbiteserver.herokuapp.com/parse',  // Don't forget to change to https if needed
+  fileKey:'4b7ee1ab-a740-4604-868c-694585d6646c',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
@@ -36,7 +37,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('(Test) I dream of being a website.  Please star the parse-server repo on GitHub!');
+  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
 });
 
 // There will be a test page available on the /test path of your server url
