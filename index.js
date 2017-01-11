@@ -35,7 +35,7 @@ var api = new ParseServer({
     module: 'parse-server-simple-mailgun-adapter',
     options: {
       // The address that your emails come from
-      fromAddress: 'amit@thebitbite.com',
+      fromAddress: 'contact@thebitbite.com',
       // Your domain from mailgun.com
       domain: 'mg.bitbiteserver.herokuapp.com',//'sandbox504d1001ffa54866b111637b83965d5c.mailgun.org',
       // Your API key from mailgun.com
