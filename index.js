@@ -20,6 +20,27 @@ var api = new ParseServer({
   fileKey:'4b7ee1ab-a740-4604-868c-694585d6646c',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+  },
+
+  verifyUserEmails: true,
+  emailVerifyTokenValidityDuration: 2 * 60 * 60, // in seconds (2 hours = 7200 seconds)
+  preventLoginWithUnverifiedEmail: false, // defaults to false
+  // The public URL of your app.
+  // This will appear in the link that is used to verify email addresses and reset passwords.
+  // Set the mount path as it is in serverURL
+  publicServerURL: 'http://bitbiteserver.herokuapp.com/parse',
+  // Your apps name. This will appear in the subject and body of the emails that are sent.
+  appName: 'BitBite',
+  emailAdapter: {
+    module: 'parse-server-simple-mailgun-adapter',
+    options: {
+      // The address that your emails come from
+      fromAddress: 'amit@thebitbite.com',
+      // Your domain from mailgun.com
+      domain: 'mg.bitbiteserver.herokuapp.com',//'sandbox504d1001ffa54866b111637b83965d5c.mailgun.org',
+      // Your API key from mailgun.com
+      apiKey: 'key-67effdeb699174bdb161fe8c477ae502',
+    }
   }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
