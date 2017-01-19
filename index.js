@@ -37,7 +37,7 @@ var api = new ParseServer({
       // The address that your emails come from
       fromAddress: 'contact@thebitbite.com',
       // Your domain from mailgun.com
-      domain: 'mg.bitbiteserver.herokuapp.com',//'sandbox504d1001ffa54866b111637b83965d5c.mailgun.org',
+      domain: 'sandbox504d1001ffa54866b111637b83965d5c.mailgun.org', // 'mg.bitbiteserver.herokuapp.com',
       // Your API key from mailgun.com
       apiKey: 'key-67effdeb699174bdb161fe8c477ae502',
     }
